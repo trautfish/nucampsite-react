@@ -11,7 +11,7 @@ const DisplayCard = ({ item }) => {
                 <CardText>{description}</CardText>
             </CardBody>
         </Card>
-    )
+    );
 };
 
 export default DisplayCard;
