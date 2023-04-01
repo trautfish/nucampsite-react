@@ -11,7 +11,7 @@ const PartnersList = () => {
                 return <div className='d-flex mb-5' key={partner.id}>
                     <Partner partner={partner} />
                 </div>
-            })};
+            })}
         </Col>
     );
 };
