@@ -24,7 +24,7 @@ const DisplayList = () => {
                         </Col>
                     )
                 );
-            })};
+            })}
         </Row>
     );
 };

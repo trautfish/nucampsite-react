@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 // import { CAMPSITES } from '../../app/shared/CAMPSITES';
 import { baseUrl } from '../../app/shared/baseUrl';
-import { mapImageURL } from '../../utils/mapImageURL';
+import { mapImageUrl } from '../../utils/mapImageUrl';
 
 export const fetchCampsites = createAsyncThunk(
     'campsites/fetchCampsites',
@@ -32,7 +32,7 @@ const campsitesSlice = createSlice({
         [fetchCampsites.fulfilled]: (state, action) => {
             state.isLoading = false;
             state.errMsg = '';
-            state.campsitesArray = mapImageURL(action.payload);
+            state.campsitesArray = mapImageUrl(action.payload);
         },
         [fetchCampsites.rejected]: (state, action) => {
             state.isLoading = false;

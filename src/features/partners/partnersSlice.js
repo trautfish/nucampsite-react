@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 // import { PARTNERS } from '../../app/shared/PARTNERS';
 import { baseUrl } from '../../app/shared/baseUrl';
-import { mapImageURL } from '../../utils/mapImageURL';
+import { mapImageUrl } from '../../utils/mapImageUrl';
 
 export const fetchPartners = createAsyncThunk(
     'partners/fetchPartners',
@@ -32,7 +32,7 @@ const partnersSlice = createSlice({
         [fetchPartners.fulfilled]: (state, action) => {
             state.isLoading = false;
             state.errMsg = '';
-            state.partnersArray = mapImageURL(action.payload);
+            state.partnersArray = mapImageUrl(action.payload);
         },
         [fetchPartners.rejected]: (state, action) => {
             state.isLoading = false;
