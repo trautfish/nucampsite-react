@@ -1,10 +1,10 @@
-import { baseUrl } from "../app/shared/baseUrl";
+import { baseUrl } from '../app/shared/baseUrl';
 
 export const mapImageUrl = (arr) => {
-    return arr.map((item) => {
-        return {
-            ...item,
-            image: baseUrl + item.image
-        }
-    });
+	return arr.map((item) => {
+		return {
+			...item,
+			image: baseUrl + item.image,
+		};
+	});
 };
